@@ -103,7 +103,7 @@ def sample_clip_config(width: int, height: int, fonts: list) -> dict:
     style = random.choice(CAPTION_STYLES)
     return {
         "font_path": random.choice(fonts) if fonts else None,
-        "font_size": random.randint(int(height * 0.045), int(height * 0.075)),
+        "font_size": random.randint(int(height * 0.020), int(height * 0.050)),
         "y_frac": random.uniform(0.68, 0.85),  # captions live in the lower band
         "pop_frames": random.choice([0, 2, 3]),  # quick scale-pop on chunk entry
         **style,
