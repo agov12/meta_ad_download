@@ -1,0 +1,39 @@
+[project]
+name = "ad-localizer"
+version = "0.1.0"
+description = "Localize English ad videos into other languages (Spanish first): transcribe, translate, clone-voice TTS, lip-sync, on-screen text."
+requires-python = ">=3.11"
+dependencies = [
+    "typer>=0.12",
+    "httpx>=0.27",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "pyyaml>=6.0",
+    "faster-whisper>=1.0",
+    "anthropic>=0.34",
+    "deepl>=1.18",
+    "elevenlabs>=1.5",
+    "syncsdk>=0.3",
+    "demucs>=4.0.1",
+    "torchcodec>=0.14.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
+[project.scripts]
+ad-localizer = "ad_localizer.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ad_localizer"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

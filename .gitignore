@@ -1,0 +1,28 @@
+# Environment files — never commit these (API keys live here)
+.env
+.env.*
+!.env.example
+*.env
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+
+# Large media / generated data — not for the repo
+downloads/
+clean_clips/
+translate_code/work/
+*.mp4
+*.mov
+*.wav
+*.mp3

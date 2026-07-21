@@ -1,0 +1,7 @@
+# Non-secret defaults. API keys live in .env, never here.
+default_target_language: es
+whisper_model: small
+translation_model: claude-sonnet-5
+elevenlabs_tts_model: eleven_multilingual_v2
+lipsync_model: lipsync-2   # "sync-3" for highest quality
+work_root: ./work
